@@ -1,50 +1,60 @@
-import AdminPage from "../pages/AdminPage";
-import AuthPage from "../pages/AuthPage";
-import CartPage from "../pages/CartPage";
-import HomePage from "../pages/HomePage";
-import ProductPage from "../pages/ProductPage";
+import { lazy } from "react";
 
 export const mainRoutes = [
   {
     name: "home",
     path: "/",
     exact: true,
-    component: HomePage,
+    component: lazy(() =>
+      import("../pages/HomePage" /* webpackChuckName: "HomePage"*/)
+    ),
   },
   {
     name: "products",
     path: "/products",
     exact: false,
-    component: ProductPage,
+    component: lazy(() =>
+      import("../pages/ProductPage" /* webpackChuckName: "ProductPage"*/)
+    ),
   },
   {
     name: "administration",
     path: "/admin",
     exact: false,
-    component: AdminPage,
+    component: lazy(() =>
+      import("../pages/AdminPage" /* webpackChuckName: "AdminPage"*/)
+    ),
   },
   {
     name: "cart",
     path: "/cart",
     exact: false,
-    component: CartPage,
+    component: lazy(() =>
+      import("../pages/CartPage" /* webpackChuckName: "CartPage"*/)
+    ),
   },
   {
     name: "registration",
     path: "/registration",
     exact: false,
-    component: AuthPage,
+    component: lazy(() =>
+      import("../pages/AuthPage" /* webpackChuckName: "AuthPage"*/)
+    ),
   },
   {
     name: "login",
     path: "/login",
     exact: false,
-    component: AuthPage,
+    component: lazy(() =>
+      import("../pages/AuthPage" /* webpackChuckName: "AuthPage"*/)
+    ),
   },
   {
     name: "profile",
     path: "/profile",
     exact: false,
-    component: AuthPage,
+    component: lazy(() =>
+      import("../pages/AuthPage" /* webpackChuckName: "AuthPage"*/)
+    ),
   },
 ];

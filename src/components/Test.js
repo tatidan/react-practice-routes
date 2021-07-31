@@ -13,7 +13,7 @@ class Test extends Component {
   //   this.setState({ data: result.data.data });
   // }
   render() {
-    return <h2>Тест</h2>;
+    return <h2>Тест с занятия про Routes</h2>;
   }
 }
 

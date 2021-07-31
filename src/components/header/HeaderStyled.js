@@ -6,5 +6,5 @@ export const Headerstyled = styled.header`
   padding-right: 15px;
   background-color: #e8e8e8;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 `;
